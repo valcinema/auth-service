@@ -42,12 +42,10 @@ export class OtpService {
 		const incomingHash = createHash('sha256').update(code).digest('hex');
 
 		if (storedHash !== incomingHash) {
-			if (!storedHash) {
-				throw new RpcException({
-					code: RpcStatus.NOT_FOUND,
-					details: 'Invalid or expired code'
-				});
-			}
+			throw new RpcException({
+				code: RpcStatus.INVALID_ARGUMENT,
+				details: 'Invalid code'
+			});
 		}
 
 		await this.redisService.del(`otp:${type}:${identifier}`);
