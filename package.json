@@ -31,7 +31,7 @@
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@valcinema/common": "^1.0.0",
-    "@valcinema/contracts": "^1.0.5",
+    "@valcinema/contracts": "^1.0.6",
     "@valcinema/core": "^1.0.3",
     "@valcinema/passport": "^1.0.0",
     "class-transformer": "^0.5.1",
