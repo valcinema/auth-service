@@ -5,6 +5,7 @@ import { PassportModule } from '@valcinema/passport';
 import { getPassportConfig } from '@/config';
 import { AuthRepository } from '@/modules/auth/auth.repository';
 import { OtpService } from '@/modules/otp/otp.service';
+import { UserRepository } from '@/shared/repositories';
 
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
@@ -17,6 +18,6 @@ import { AuthService } from './auth.service';
 		})
 	],
 	controllers: [AuthController],
-	providers: [AuthService, AuthRepository, OtpService]
+	providers: [AuthService, AuthRepository, UserRepository, OtpService]
 })
 export class AuthModule {}
